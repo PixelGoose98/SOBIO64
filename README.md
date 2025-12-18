@@ -8,4 +8,6 @@ use it if you want to make your own os's
 
   uses nasm and your computers gcc. no cross compilers in the makefile, if you want to add any files you need to edit the makefile.
 
-  
+  make
+  make run
+  make clean
