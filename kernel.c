@@ -6,7 +6,7 @@
 #define VGA_TEXT ((volatile uint16_t*)0xB8000)
 #define VGA_COLS 80
 #define VGA_ROWS 25
-#define ARRAY_IDT_LEN 255
+#define ARRAY_IDT_LEN 256
 
 struct IntDesc64 {
    uint16_t offset_1;        // offset bits 0..15
