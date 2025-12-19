@@ -20,6 +20,11 @@ struct IntDesc64 {
 
 IntDesc64 array_int_desc_64[ARRAY_IDT_LEN];
 
+struct IDTR {
+    uint16_t limit;            
+    uint64_t base;             
+} __attribute__((packed));
+
 static int cursor_x = 0;
 static int cursor_y = 0;
 static uint8_t text_color = 0x0F; // white on black
