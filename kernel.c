@@ -25,6 +25,18 @@ struct IDTR {
     uint64_t base;             
 } __attribute__((packed));
 
+struct interrupt_frame {
+    uint64_t r15, r14, r13, r12, r11, r10, r9, r8;
+    uint64_t rbp, rdi, rsi, rdx, rcx, rbx, rax;
+    uint64_t intNo;
+    uint64_t errorCode;
+    uint64_t rip;
+    uint64_t cs;
+    uint64_t rflags;
+    uint64_t rsp;
+    uint64_t ss;
+};
+
 static int cursor_x = 0;
 static int cursor_y = 0;
 static uint8_t text_color = 0x0F; // white on black
